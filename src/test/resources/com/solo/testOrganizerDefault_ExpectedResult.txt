@@ -1,0 +1,20 @@
+Track 1:
+09:00AM 2 Hours Workshop 120min
+11:00AM 60 Minutes Workshop 60min
+12:00PM Lunch
+01:00PM 100 Minutes Workshop 100min
+02:40PM 90 Minutes Workshop 90min
+04:10PM 45 Minutes Workshop 45min
+04:55PM Lightning Workshop lightning
+05:00PM Meet Your Colleagues Event
+
+Track 2:
+09:00AM 75 Minutes Workshop 75min
+10:15AM 65 Minutes Workshop 65min
+11:20AM 35 Minutes Workshop 35min
+12:00PM Lunch
+01:00PM 30 Minutes Workshop 30min
+01:30PM 15 Minutes Workshop 15min
+01:45PM 10 Minutes Workshop 10min
+04:00PM Meet Your Colleagues Event
+

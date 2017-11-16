@@ -1,0 +1,195 @@
+Track 1:
+09:00AM 10 Javascript libs you need to start using right now 100min
+10:40AM 10 more Javascript libs you need to start using right now 80min
+12:00PM Lunch
+01:00PM Spring: Your next IoC container 90min
+02:30PM AWS and You 85min
+03:55PM Create better mocks for Spring Boot 65min
+05:00PM Meet Your Colleagues Event
+
+Track 2:
+09:00AM How to: JMS 85min
+10:25AM Write your own scripts with Python 80min
+11:45AM Where to find the information you need 15min
+12:00PM Lunch
+01:00PM Object Oriented Design 80min
+02:20PM So, you want to make Android Apps? 80min
+03:40PM Creating your own Maven plugin 75min
+04:55PM Scala from JEE guys lightning
+05:00PM Meet Your Colleagues Event
+
+Track 3:
+09:00AM Everything you need to know about RegEx 75min
+10:15AM Good algorithms 101 75min
+11:30AM Fun with Kotlin 30min
+12:00PM Lunch
+01:00PM Most important Design Patterns in routine 65min
+02:05PM Slack for old people 60min
+03:05PM Best Spring Features 60min
+04:05PM VisualVM: Profiling your Application 55min
+05:00PM Meet Your Colleagues Event
+
+Track 4:
+09:00AM Advance Spring Boot 60min
+10:00AM Maintain Java Code 60min
+11:00AM EJB3 vs Spring 60min
+12:00PM Lunch
+01:00PM What’s the deal with Docker 60min
+02:00PM Looking into the company’s future 60min
+03:00PM Java 8: what’s new 60min
+04:00PM 5 characteristics of a good team leader 60min
+05:00PM Meet Your Colleagues Event
+
+Track 5:
+09:00AM Groovyig all the way vol1 60min
+10:00AM IntelliJ vs Eclipse 60min
+11:00AM XSTL and XPath 60min
+12:00PM Lunch
+01:00PM Bad habits and how they spoil you 60min
+02:00PM Database independent code with Liquibase 55min
+02:55PM Ask your questions 55min
+03:50PM SQL: beyond the everyday’s queries 50min
+04:40PM Configuring your Tomcat 20min
+05:00PM Meet Your Colleagues Event
+
+Track 6:
+09:00AM Setting up your own Ubuntu repository 50min
+09:50AM Create better mocks for Spring Boot: Mockito 50min
+10:40AM Web interface tests with Selenium 50min
+11:30AM Healthier lunch in Berlin 30min
+12:00PM Lunch
+01:00PM Share your knowledge vol4 50min
+01:50PM The design of a good user’s manual 50min
+02:40PM Managing dependencies with Maven 45min
+03:25PM Better error handling in Java 45min
+04:10PM Finance Domain explained 45min
+04:55PM Tips of good reads lightning
+05:00PM Meet Your Colleagues Event
+
+Track 7:
+09:00AM Better work in Teams 45min
+09:45AM Why Clojure Matters 45min
+10:30AM Lessons on Struts vol1 45min
+11:15AM Lessons on Struts vol2 45min
+12:00PM Lunch
+01:00PM “Git”ing like a boss vol2 45min
+01:45PM First look at Node.js 45min
+02:30PM True MVC 45min
+03:15PM Configuring Jenkins for daily tests 45min
+04:00PM All you wanted to know about Germany 45min
+04:45PM What’s the buzz today 15min
+05:00PM Meet Your Colleagues Event
+
+Track 8:
+09:00AM Yoga session 45min
+09:45AM Groovyig all the way vol3 45min
+10:30AM Ready for NoSQL database 45min
+11:15AM Share your knowledge vol2 45min
+12:00PM Lunch
+01:00PM Share your knowledge vol5 45min
+01:45PM Quick intro to Angular.js 45min
+02:30PM Quick intro to React.js 45min
+03:15PM Quick intro to Ember.js 45min
+04:00PM Let’s talk about Breast Cancer 45min
+04:45PM Best YouTube channels for programmers 15min
+05:00PM Meet Your Colleagues Event
+
+Track 9:
+09:00AM REST assured 45min
+09:45AM Never again let that commit break the entire system: Gerrit 45min
+10:30AM Thinking about your future 45min
+11:15AM More Java for people 40min
+11:55AM Best places to buy your stuff lightning
+12:00PM Lunch
+01:00PM Lessons in Hibernate 40min
+01:40PM Here it comes: Ansible! 40min
+02:20PM BASH for noobies 40min
+03:00PM Struts 2 vs Spring 40min
+03:40PM Efficient debugging methods 40min
+04:20PM Terminal: the essentials 40min
+05:00PM Meet Your Colleagues Event
+
+Track 10:
+09:00AM Cool stuff you didn’t knew you could do with the Terminal 40min
+09:40AM Good practices vol2 40min
+10:20AM Share your knowledge vol1 40min
+11:00AM Writing your own Workshop: a Meta-Workshop 40min
+11:40AM “Git”ing like a boss vol4 20min
+12:00PM Lunch
+01:00PM Good eating habits: preventing health problems 40min
+01:40PM Webservices with SOAP 40min
+02:20PM You didn’t know: Java vol1 40min
+03:00PM You didn’t know: Java vol2 40min
+03:40PM You didn’t know: Java vol3 40min
+04:20PM You didn’t know: Java vol4 40min
+05:00PM Meet Your Colleagues Event
+
+Track 11:
+09:00AM You didn’t know: Java vol5 40min
+09:40AM I want to become a manager 40min
+10:20AM “Git”ing like a boss vol1 35min
+10:55AM Microservices Oriented Design 35min
+11:30AM Scope Future 30min
+12:00PM Lunch
+01:00PM How to properly write a UML diagram 35min
+01:35PM Groovyig all the way vol2 35min
+02:10PM Nostalgic Moment: building with Ant 35min
+02:45PM Living in Berlin 30min
+03:15PM Working with Azure 30min
+03:45PM Better Way of reading Books 30min
+04:15PM What you need to know about ExtJS 30min
+04:45PM Tips and hints for your daily routine 15min
+05:00PM Meet Your Colleagues Event
+
+Track 12:
+09:00AM “Git”ing like a boss vol3 30min
+09:30AM Keeping your documentation in one place with Confluence 30min
+10:00AM Chat with the HR 30min
+10:30AM United we Stand: Pair Programming 30min
+11:00AM Ubuntu community 30min
+11:30AM Good Game(s) 30min
+12:00PM Lunch
+01:00PM Avoiding circular dependency with Tattletale 30min
+01:30PM MacOS is your friend 30min
+02:00PM Create your own templates with Freemarker 30min
+02:30PM Good practices vol3 30min
+03:00PM Share your knowledge vol3 30min
+03:30PM Best tools for what we’re doing 30min
+04:00PM You should do more exercises 30min
+04:30PM Good places to exercise your solidarity 30min
+05:00PM Meet Your Colleagues Event
+
+Track 13:
+09:00AM Tai-chi session 30min
+09:30AM Quiz Time! vol1 30min
+10:00AM Quiz Time! vol2 30min
+10:30AM Quiz Time! vol3 30min
+11:00AM Quiz Time! vol4 30min
+11:30AM The ABC’s of Scrum 25min
+11:55AM Let’s talk about movies lightning
+12:00PM Lunch
+01:00PM “Git”ing like a boss vol5 25min
+01:25PM Why a good interface makes all the difference 25min
+01:50PM What’s the buzz of the week 25min
+02:15PM Good practices vol1 25min
+02:40PM Why good writing skills are important 25min
+03:05PM Donations: let’s share 25min
+03:30PM Proper documentation: Preventing today a problem for tomorrow 20min
+03:50PM Naming conventions 20min
+04:10PM What’s cool in TV right now 20min
+04:30PM Covering your bases: Eclemma 20min
+04:50PM Setting up your Skype 10min
+05:00PM Meet Your Colleagues Event
+
+Track 14:
+09:00AM Prepare for Game Night! 20min
+09:20AM Love your client 10min
+09:30AM Save a tree, use Trello 10min
+09:40AM Next steps lightning
+09:45AM Saved by the Ctrl+S lightning
+09:50AM Best Kickstarter campaigns lightning
+09:55AM Cron syntax lightning
+10:00AM Keeping up with the team lightning
+12:00PM Lunch
+04:00PM Meet Your Colleagues Event
+

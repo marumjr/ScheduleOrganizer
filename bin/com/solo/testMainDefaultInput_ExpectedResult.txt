@@ -1,0 +1,27 @@
+Track 1:
+09:00AM Create better mocks for Spring Boot 65min
+10:05AM Slack for old people 60min
+11:05AM Managing dependencies with Maven 45min
+12:00PM Lunch
+01:00PM Best Spring Features 60min
+02:00PM Advance Spring Boot 60min
+03:00PM Maintain Java Code 60min
+04:00PM Better error handling in Java 45min
+04:45PM Meet Your Colleagues Event
+
+Track 2:
+09:00AM Finance Domain explained 45min
+09:45AM Better work in Teams 45min
+10:30AM Why Clojure Matters 45min
+11:15AM More Java for people 40min
+11:55AM Scala from JEE guys lightning
+12:00PM Lunch
+01:00PM Fun with Kotlin 30min
+01:30PM Healthier lunch in Berlin 30min
+02:00PM Scope Future 30min
+02:30PM Living in Berlin 30min
+03:00PM Working with Azure 30min
+03:30PM Better Way of reading Books 30min
+04:00PM What you need to know about ExtJS 30min
+04:30PM Meet Your Colleagues Event
+

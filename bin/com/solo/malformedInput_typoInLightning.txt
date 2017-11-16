@@ -1,0 +1,2 @@
+Create better mocks for Spring Boot 65min
+Scope Future ligthning

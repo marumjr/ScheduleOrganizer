@@ -1,0 +1,140 @@
+Create better mocks for Spring Boot 65min
+More Java for people 40min
+Fun with Kotlin 30min
+Managing dependencies with Maven 45min
+Better error handling in Java 45min
+Scala from JEE guys lightning
+Slack for old people 60min
+Finance Domain explained 45min
+Healthier lunch in Berlin 30min
+Scope Future 30min
+Better work in Teams 45min
+Best Spring Features 60min
+Advance Spring Boot 60min
+Why Clojure Matters 45min
+Living in Berlin 30min
+Working with Azure 30min
+Maintain Java Code 60min
+Better Way of reading Books 30min
+What you need to know about ExtJS 30min
+Lessons on Struts vol1 45min
+Lessons on Struts vol2 45min
+Spring: Your next IoC container 90min
+Creating your own Maven plugin 75min
+Creating your own (simple) Eclipse plugin 200min
+Tips of good reads lightning
+“Git”ing like a boss vol1 35min
+“Git”ing like a boss vol2 45min
+“Git”ing like a boss vol3 30min
+The ABC’s of Scrum 25min
+AWS and You 85min
+Configuring your Tomcat 20min
+“Git”ing like a boss vol4 20min
+“Git”ing like a boss vol5 25min
+Where to find the information you need 15min
+Proper documentation: Preventing today a problem for tomorrow 20min
+EJB3 vs Spring 60min
+First look at Node.js 45min
+Keeping your documentation in one place with Confluence 30min
+What’s the buzz today 15min
+Lessons in Hibernate 40min
+SQL: beyond the everyday’s queries 50min
+10 Javascript libs you need to start using right now 100min
+Naming conventions 20min
+Best places to buy your stuff lightning
+Setting up your Skype 10min
+What’s the deal with Docker 60min
+Setting up your own Ubuntu repository 50min
+Looking into the company’s future 60min
+Here it comes: Ansible! 40min
+Chat with the HR 30min
+Love your client 10min
+True MVC 45min
+Microservices Oriented Design 35min
+Best YouTube channels for programmers 15min
+10 more Javascript libs you need to start using right now 80min
+Why a good interface makes all the difference 25min
+BASH for noobies 40min
+Create better mocks for Spring Boot: Mockito 50min
+Java 8: what’s new 60min
+Let’s talk about movies lightning
+Configuring Jenkins for daily tests 45min
+Everything you need to know about RegEx 75min
+Tips and hints for your daily routine 15min
+Write your own scripts with Python 80min
+All you wanted to know about Germany 45min
+Yoga session 45min
+United we Stand: Pair Programming 30min
+5 characteristics of a good team leader 60min
+How to properly write a UML diagram 35min
+What’s cool in TV right now 20min
+Covering your bases: Eclemma 20min
+Ubuntu community 30min
+Good Game(s) 30min
+Web interface tests with Selenium 50min
+Object Oriented Design 80min
+Most important Design Patterns in routine 65min
+Good algorithms 101 75min
+Struts 2 vs Spring 40min
+Groovyig all the way vol1 60min
+Groovyig all the way vol2 35min
+Groovyig all the way vol3 45min
+Save a tree, use Trello 10min
+IntelliJ vs Eclipse 60min
+Nostalgic Moment: building with Ant 35min
+Avoiding circular dependency with Tattletale 30min
+Efficient debugging methods 40min
+VisualVM: Profiling your Application 55min
+So, you want to make Android Apps? 80min
+MacOS is your friend 30min
+Terminal: the essentials 40min
+Cool stuff you didn’t knew you could do with the Terminal 40min
+Create your own templates with Freemarker 30min
+XSTL and XPath 60min
+How to: JMS 85min
+What’s the buzz of the week 25min
+Good practices vol1 25min
+Good practices vol2 40min
+Good practices vol3 30min
+Ready for NoSQL database 45min
+Database independent code with Liquibase 55min
+Next steps lightning
+Share your knowledge vol1 40min
+Share your knowledge vol2 45min
+Share your knowledge vol3 30min
+Share your knowledge vol4 50min
+Share your knowledge vol5 45min
+Bad habits and how they spoil you 60min
+Writing your own Workshop: a Meta-Workshop 40min
+Why good writing skills are important 25min
+The design of a good user’s manual 50min
+Quick intro to Angular.js 45min
+Quick intro to React.js 45min
+Quick intro to Ember.js 45min
+Prepare for Game Night! 20min
+Saved by the Ctrl+S lightning
+Best tools for what we’re doing 30min
+You should do more exercises 30min
+Good eating habits: preventing health problems 40min
+Let’s talk about Breast Cancer 45min
+Donations: let’s share 25min
+Good places to exercise your solidarity 30min
+Best Kickstarter campaigns lightning
+Webservices with SOAP 40min
+REST assured 45min
+You didn’t know: Java vol1 40min
+You didn’t know: Java vol2 40min
+You didn’t know: Java vol3 40min
+You didn’t know: Java vol4 40min
+You didn’t know: Java vol5 40min
+Never again let that commit break the entire system: Gerrit 45min
+Cron syntax lightning
+Tai-chi session 30min
+Thinking about your future 45min
+I want to become a manager 40min
+Quiz Time! vol1 30min
+Quiz Time! vol2 30min
+Quiz Time! vol3 30min
+Quiz Time! vol4 30min
+Ask your questions 55min
+Keeping up with the team lightning
