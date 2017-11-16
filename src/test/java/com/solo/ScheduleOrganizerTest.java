@@ -20,39 +20,39 @@ import com.solo.talk.Talk;
 public class ScheduleOrganizerTest extends LargeOutputTest {
 
 	/**
-	 * Check the {@link ScheduleOrganizer#parseWorkshopInfo(String)}
+	 * Check the {@link ScheduleOrganizer#parseTalkInfo(String)}
 	 * <p>
 	 * Check the common cases, the lightning special case and some unusual
-	 * cases, like a workshop with long name or duration
+	 * cases, like a talk with long name or duration
 	 */
 	@Test
-	public void testParseWorkshopInfo() {
+	public void testParseTalkInfo() {
 		// Common cases
-		Talk workshop = ScheduleOrganizer.parseWorkshopInfo("65 Minutes Workshop 65min");
-		Assert.assertEquals("65 Minutes Workshop", workshop.getName());
-		Assert.assertEquals(65, workshop.getDuration());
+		Talk talk = ScheduleOrganizer.parseTalkInfo("65 Minutes Talk 65min");
+		Assert.assertEquals("65 Minutes Talk", talk.getName());
+		Assert.assertEquals(65, talk.getDuration());
 
-		workshop = ScheduleOrganizer.parseWorkshopInfo("5 Minutes Workshop 5min");
-		Assert.assertEquals("5 Minutes Workshop", workshop.getName());
-		Assert.assertEquals(5, workshop.getDuration());
+		talk = ScheduleOrganizer.parseTalkInfo("5 Minutes Talk 5min");
+		Assert.assertEquals("5 Minutes Talk", talk.getName());
+		Assert.assertEquals(5, talk.getDuration());
 
 		// Handling lightning special case
-		workshop = ScheduleOrganizer.parseWorkshopInfo("Lightning Workshop lightning");
-		Assert.assertEquals("Lightning Workshop", workshop.getName());
-		Assert.assertEquals(5, workshop.getDuration());
+		talk = ScheduleOrganizer.parseTalkInfo("Lightning Talk lightning");
+		Assert.assertEquals("Lightning Talk", talk.getName());
+		Assert.assertEquals(5, talk.getDuration());
 
 		// Checking if it matters to have a long name
-		workshop = ScheduleOrganizer.parseWorkshopInfo(
-				"Workshop with a really long name just to see if it's working under extreme conditions and whatnot 40min");
+		talk = ScheduleOrganizer.parseTalkInfo(
+				"Talk with a really long name just to see if it's working under extreme conditions and whatnot 40min");
 		Assert.assertEquals(
-				"Workshop with a really long name just to see if it's working under extreme conditions and whatnot",
-				workshop.getName());
-		Assert.assertEquals(40, workshop.getDuration());
+				"Talk with a really long name just to see if it's working under extreme conditions and whatnot",
+				talk.getName());
+		Assert.assertEquals(40, talk.getDuration());
 
 		// Checking if matters have a long duration
-		workshop = ScheduleOrganizer.parseWorkshopInfo("Workshop with a long duration 30000min");
-		Assert.assertEquals("Workshop with a long duration", workshop.getName());
-		Assert.assertEquals(30000, workshop.getDuration());
+		talk = ScheduleOrganizer.parseTalkInfo("Talk with a long duration 30000min");
+		Assert.assertEquals("Talk with a long duration", talk.getName());
+		Assert.assertEquals(30000, talk.getDuration());
 	}
 
 	/**
@@ -60,7 +60,7 @@ public class ScheduleOrganizerTest extends LargeOutputTest {
 	 * Check the {@link ScheduleOrganizer#parseInputFile(String)}
 	 * <p>
 	 * It loads <b>defaultInput.txt</b> into the parseInputFile(), which returns
-	 * a list of Workshops. It then iterates over each Workshop to see if it was
+	 * a list of Talks. It then iterates over each Talk to see if it was
 	 * correctly parsed.
 	 * 
 	 * @throws FileNotFoundException
@@ -71,8 +71,8 @@ public class ScheduleOrganizerTest extends LargeOutputTest {
 	public void testParseInputFile() throws FileNotFoundException, IOException, URISyntaxException {
 		File inputFile = retrieveResourceFile("defaultInput.txt");
 
-		List<Talk> workshops = ScheduleOrganizer.parseInputFile(inputFile.getAbsolutePath());
-		Iterator<Talk> iterator = workshops.iterator();
+		List<Talk> talks = ScheduleOrganizer.parseInputFile(inputFile.getAbsolutePath());
+		Iterator<Talk> iterator = talks.iterator();
 
 		// Check every possible parsed line
 		assertSameName(iterator, "Create better mocks for Spring Boot", 65);
@@ -173,20 +173,20 @@ public class ScheduleOrganizerTest extends LargeOutputTest {
 	}
 
 	/**
-	 * Assert if the next Workshop in iterator has the expected name and
+	 * Assert if the next Talk in iterator has the expected name and
 	 * duration
 	 * 
 	 * @param iterator
-	 *            Iterator with the Workshops
+	 *            Iterator with the Talks
 	 * @param expectedName
 	 *            Expected name which to compare
 	 * @param expectedDuration
 	 *            Expected duration which to compare
 	 */
 	private void assertSameName(Iterator<Talk> iterator, String expectedName, int expectedDuration) {
-		Talk nextWorkshop = iterator.next();
-		Assert.assertEquals(expectedName, nextWorkshop.getName());
-		Assert.assertEquals(expectedDuration, nextWorkshop.getDuration());
+		Talk nextTalk = iterator.next();
+		Assert.assertEquals(expectedName, nextTalk.getName());
+		Assert.assertEquals(expectedDuration, nextTalk.getDuration());
 	}
 
 }

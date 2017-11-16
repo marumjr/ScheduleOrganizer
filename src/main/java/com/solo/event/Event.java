@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Abstract class representing an event during the day, like a workshop or the
+ * Abstract class representing an event during the day, like a talk or the
  * lunch time.
  * 
  * @author marumjr

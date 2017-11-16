@@ -65,7 +65,7 @@ public class Track {
 	 *            afternoon
 	 */
 	private void buildEvents(MorningSession morningSession, AfternoonSession afternoonSession) {
-		// First, add all the morning WorkshopEvents...
+		// First, add all the morning TalkEvents...
 		for (Event event : morningSession.getEvents()) {
 			this.events.add(event);
 		}
@@ -81,7 +81,7 @@ public class Track {
 
 			// And try to add the MeetYourColleaguesEvent...
 			try {
-				// ... either after the last afternoon's workshop...
+				// ... either after the last afternoon's talk...
 				Date nextEventTime = afternoonSession.getNextEventTime();
 				MeetYourColleaguesEvent meetYourColleaguesEvent = new MeetYourColleaguesEvent(nextEventTime);
 				this.events.add(meetYourColleaguesEvent);

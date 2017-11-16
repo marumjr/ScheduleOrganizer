@@ -13,8 +13,8 @@ import com.solo.talk.Talk;
  * The main class (containing the main() method).
  * <p>
  * The schedule organizer must read the input of a file, parse its content
- * searching for workshops' information, organize the schedule for those
- * workshops and present it back to the user.
+ * searching for talks' information, organize the schedule for those
+ * talks and present it back to the user.
  * 
  * @author marumjr
  */
@@ -31,11 +31,11 @@ public class ScheduleOrganizer {
 	 * while trying to read the file.</b> will emerge.
 	 * <p>
 	 * If everything is OK, then it will parse the file content, organize the
-	 * schedule for the present workshops and print said schedule.
+	 * schedule for the present talks and print said schedule.
 	 * 
 	 * @param args
 	 *            List of arguments. The first argument must be the name of the
-	 *            file containing the workshops' names and durations, otherwise
+	 *            file containing the talks' names and durations, otherwise
 	 *            the program will come to an end with an error message.
 	 */
 	public static void main(String[] args) {
@@ -43,9 +43,9 @@ public class ScheduleOrganizer {
 			// Assuming the first argument will be a file, and ignoring anything
 			// else
 			String filename = args[0];
-			List<Talk> workshops = parseInputFile(filename);
+			List<Talk> talks = parseInputFile(filename);
 
-			Organizer organizer = new Organizer(workshops);
+			Organizer organizer = new Organizer(talks);
 			organizer.printTracks();
 
 		} catch (FileNotFoundException e) {
@@ -61,7 +61,7 @@ public class ScheduleOrganizer {
 
 	/**
 	 * Look for a file called filename, then parse its content in order to
-	 * retrieve the information concerning the next workshops
+	 * retrieve the information concerning the next talks
 	 * 
 	 * @param filename
 	 *            The name of the file
@@ -69,40 +69,40 @@ public class ScheduleOrganizer {
 	 * @throws IOException
 	 */
 	protected static List<Talk> parseInputFile(String filename) throws IOException {
-		List<Talk> workshops = new ArrayList<Talk>();
+		List<Talk> talks = new ArrayList<Talk>();
 
 		// Reading the parameters from the file
 		String line = null;
 		BufferedReader br = new BufferedReader(new FileReader(filename));
 		while ((line = br.readLine()) != null) {
-			Talk workshop = parseWorkshopInfo(line);
-			workshops.add(workshop);
+			Talk talk = parseTalkInfo(line);
+			talks.add(talk);
 		}
 		br.close();
 
-		return workshops;
+		return talks;
 	}
 
 	/**
-	 * Parse a text line in search of peaces of workshop information, then
+	 * Parse a text line in search of peaces of talk information, then
 	 * construct said {@link Talk} with the peaces of information found
 	 * 
 	 * @param line
-	 *            Line of text to be parsed for the workshop information
+	 *            Line of text to be parsed for the talk information
 	 * @return an instance of {@link Talk}
 	 */
-	protected static Talk parseWorkshopInfo(String line) {
+	protected static Talk parseTalkInfo(String line) {
 		String trimmedLine = line.trim();
 		int lastSpace = trimmedLine.lastIndexOf(" ");
 
-		// The first part of the string describes the workshop's name
+		// The first part of the string describes the talk's name
 		String name = trimmedLine.substring(0, lastSpace);
 		// The last peace of information in each line is the duration of the
 		// event
 		String duration = trimmedLine.substring(lastSpace + 1, trimmedLine.length());
 
-		Talk workshop = new Talk(name, duration);
-		return workshop;
+		Talk talk = new Talk(name, duration);
+		return talk;
 	}
 
 }

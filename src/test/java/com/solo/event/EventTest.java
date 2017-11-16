@@ -103,13 +103,13 @@ public class EventTest {
 	 * The normal case here states that it's not a lightning event
 	 */
 	@Test
-	public void testWorkshopEventNormal() {
-		// The 'normal' Workshop event doesn't have lightning duration
-		Talk workshop = new Talk("15 Minutes Workshop", 15);
+	public void testTalkEventNormal() {
+		// The 'normal' Talk event doesn't have lightning duration
+		Talk talk = new Talk("15 Minutes Talk", 15);
 
-		TalkEvent event = new TalkEvent(workshop);
+		TalkEvent event = new TalkEvent(talk);
 		Assert.assertEquals(15, event.getDuration());
-		Assert.assertEquals("15 Minutes Workshop", event.getName());
+		Assert.assertEquals("15 Minutes Talk", event.getName());
 
 		// Check that the event has no scheduled time, as it was not assigned
 		// yet
@@ -118,7 +118,7 @@ public class EventTest {
 		event.setScheduledTime(DateUtils.createDate(13, 30));
 		Assert.assertEquals(DateUtils.createDate(13, 30), event.getScheduledTime());
 
-		Assert.assertEquals("01:30PM 15 Minutes Workshop 15min", event.toString());
+		Assert.assertEquals("01:30PM 15 Minutes Talk 15min", event.toString());
 
 		// Here, if we change the parameters, they should REALLY take effect
 		event.setDuration(5);
@@ -133,19 +133,19 @@ public class EventTest {
 	 * In this case, it's testing a lightning event
 	 */
 	@Test
-	public void testWorkshopEventLightning() {
-		// The 'lightning' Workshop event has a 5 minutes duration
-		Talk workshop = new Talk("Lightning Workshop", 5);
+	public void testTalkEventLightning() {
+		// The 'lightning' Talk event has a 5 minutes duration
+		Talk talk = new Talk("Lightning Talk", 5);
 
-		TalkEvent event = new TalkEvent(workshop);
+		TalkEvent event = new TalkEvent(talk);
 		event.setScheduledTime(DateUtils.createDate(13, 30));
 
 		Assert.assertEquals(5, event.getDuration());
-		Assert.assertEquals("Lightning Workshop", event.getName());
+		Assert.assertEquals("Lightning Talk", event.getName());
 		Assert.assertEquals(DateUtils.createDate(13, 30), event.getScheduledTime());
 
 		// The only real change is in the printing format
-		Assert.assertEquals("01:30PM Lightning Workshop lightning", event.toString());
+		Assert.assertEquals("01:30PM Lightning Talk lightning", event.toString());
 	}
 
 }

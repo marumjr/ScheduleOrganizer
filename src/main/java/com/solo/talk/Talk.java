@@ -3,7 +3,7 @@ package com.solo.talk;
 import com.solo.utils.GlobalConstraints;
 
 /**
- * Object that represents a Workshop, as read in an input file.
+ * Object that represents a Talk, as read in an input file.
  * 
  * @author marumjr
  */
@@ -17,9 +17,9 @@ public class Talk {
 	 * Constructor
 	 * 
 	 * @param name
-	 *            The workshop's name
+	 *            The talk's name
 	 * @param duration
-	 *            The workshop's duration (in minutes)
+	 *            The talk's duration (in minutes)
 	 */
 	public Talk(String name, int duration) {
 		this.name = name;
@@ -30,13 +30,13 @@ public class Talk {
 	 * Alternative constructor.
 	 * <p>
 	 * This one will parse the String in duration, trying to extract its
-	 * information. It could be a lightning workshop (in which case, the String
+	 * information. It could be a lightning talk (in which case, the String
 	 * will be exactly that), or it'll be in a format similar to '45min'
 	 * 
 	 * @param name
-	 *            The workshop's name
+	 *            The talk's name
 	 * @param duration
-	 *            A string containing the workshop's duration
+	 *            A string containing the talk's duration
 	 */
 	public Talk(String name, String duration) {
 		this.name = name;

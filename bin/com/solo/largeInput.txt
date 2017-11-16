@@ -105,7 +105,7 @@ Share your knowledge vol3 30min
 Share your knowledge vol4 50min
 Share your knowledge vol5 45min
 Bad habits and how they spoil you 60min
-Writing your own Workshop: a Meta-Workshop 40min
+Writing your own Talk: a Meta-Talk 40min
 Why good writing skills are important 25min
 The design of a good user’s manual 50min
 Quick intro to Angular.js 45min

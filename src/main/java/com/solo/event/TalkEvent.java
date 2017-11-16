@@ -4,7 +4,7 @@ import com.solo.talk.Talk;
 import com.solo.utils.GlobalConstraints;
 
 /**
- * Subclass of {@link Event}, representing a scheduled workshop.
+ * Subclass of {@link Event}, representing a scheduled talk.
  * 
  * @author marumjr
  */
@@ -15,13 +15,13 @@ public class TalkEvent extends Event {
 	 * <p>
 	 * It builds this object according to the content of a {@link Talk}.
 	 * 
-	 * @param workshop
+	 * @param talk
 	 *            A {@link Talk} containing informations to build this
 	 *            object
 	 */
-	public TalkEvent(Talk workshop) {
-		this.name = workshop.getName();
-		this.duration = workshop.getDuration();
+	public TalkEvent(Talk talk) {
+		this.name = talk.getName();
+		this.duration = talk.getDuration();
 	}
 
 	/**

@@ -45,11 +45,11 @@ public abstract class Session {
 	}
 
 	/**
-	 * Adds an WorkshopEvent to the session, if there's still enough room for
+	 * Adds an TalkEvent to the session, if there's still enough room for
 	 * it. Otherwise, just answer with a <code>false</code>, doing nothing else.
 	 * 
 	 * @param event
-	 *            WorkshopEvent we want to add to this session
+	 *            TalkEvent we want to add to this session
 	 * @return <code>true</code> if the Event could be added, <code>false</code>
 	 *         otherwise
 	 */

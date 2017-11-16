@@ -29,12 +29,12 @@ public class Organizer {
 	 * One must provide it with the a list of {@link Talk}s for it to
 	 * organize.
 	 * 
-	 * @param workshops
+	 * @param talks
 	 *            A list of {@link Talk}s to organize
 	 */
-	public Organizer(List<Talk> workshops) {
-		Collections.sort(workshops, new TalkDurationReverseComparator());
-		this.organize(workshops);
+	public Organizer(List<Talk> talks) {
+		Collections.sort(talks, new TalkDurationReverseComparator());
+		this.organize(talks);
 	}
 
 	/**
@@ -56,22 +56,22 @@ public class Organizer {
 	}
 
 	/**
-	 * Organizes the workshops in Tracks.
+	 * Organizes the talks in Tracks.
 	 * <p>
-	 * It organizes the schedules using a 'Best Fit' algorithm, where a Workshop
+	 * It organizes the schedules using a 'Best Fit' algorithm, where a Talk
 	 * is added to a Track if and only if it will leave the least amount of
 	 * available time among all the available tracks.
 	 * 
-	 * @param workshops
-	 *            List of workshops to organize in tracks
+	 * @param talks
+	 *            List of talks to organize in tracks
 	 */
-	private void organize(List<Talk> workshops) {
+	private void organize(List<Talk> talks) {
 		// Initialize our SessionFactory
 		SessionFactory sessionFactory = new SessionFactory();
 
 		List<Session> sessions = new ArrayList<Session>();
-		for (Talk workshop : workshops) {
-			int duration = workshop.getDuration();
+		for (Talk talk : talks) {
+			int duration = talk.getDuration();
 			int bestFitIndex = -1;
 			int minDurationLeft = Integer.MAX_VALUE;
 
@@ -97,7 +97,7 @@ public class Organizer {
 				session = sessions.get(bestFitIndex);
 			}
 			// Add event to the session
-			TalkEvent event = new TalkEvent(workshop);
+			TalkEvent event = new TalkEvent(talk);
 			session.addEvent(event);
 		}
 

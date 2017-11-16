@@ -43,23 +43,23 @@ public class SessionTest {
 		// left?
 		Assert.assertEquals((180 - 15), session.calculateDurationUsage(15));
 
-		// Configuring a workshop
-		TalkEvent w15 = createWorkshopEvent("15 Minutes Workshop", 15);
+		// Configuring a talk
+		TalkEvent w15 = createTalkEvent("15 Minutes Talk", 15);
 		Assert.assertEquals(true, session.addEvent(w15));
 		Assert.assertEquals(1, session.getEvents().size());
 		Assert.assertEquals(DateUtils.createDate(9, 15), session.getNextEventTime());
 		Assert.assertEquals(165, session.getMinutesLeft());
 
-		// Check that a Workshop that is too long won't be configured...
-		TalkEvent wLong = createWorkshopEvent("300 Minutes Workshop", 300);
+		// Check that a Talk that is too long won't be configured...
+		TalkEvent wLong = createTalkEvent("300 Minutes Talk", 300);
 		Assert.assertEquals(false, session.addEvent(wLong));
 		// ... and that it didn't have messed around with the other parameters
 		Assert.assertEquals(1, session.getEvents().size());
 		Assert.assertEquals(DateUtils.createDate(9, 15), session.getNextEventTime());
 		Assert.assertEquals(165, session.getMinutesLeft());
 
-		// ... but we can still add other normal sized Workshops
-		TalkEvent w30 = createWorkshopEvent("30 Minutes Workshop", 30);
+		// ... but we can still add other normal sized Talks
+		TalkEvent w30 = createTalkEvent("30 Minutes Talk", 30);
 		Assert.assertEquals(true, session.addEvent(w30));
 		Assert.assertEquals(2, session.getEvents().size());
 		Assert.assertEquals(DateUtils.createDate(9, 45), session.getNextEventTime());
@@ -94,23 +94,23 @@ public class SessionTest {
 		// left?
 		Assert.assertEquals((240 - 15), session.calculateDurationUsage(15));
 
-		// Configuring a workshop
-		TalkEvent w15 = createWorkshopEvent("15 Minutes Workshop", 15);
+		// Configuring a talk
+		TalkEvent w15 = createTalkEvent("15 Minutes Talk", 15);
 		Assert.assertEquals(true, session.addEvent(w15));
 		Assert.assertEquals(1, session.getEvents().size());
 		Assert.assertEquals(DateUtils.createDate(13, 15), session.getNextEventTime());
 		Assert.assertEquals(225, session.getMinutesLeft());
 
-		// Check that a Workshop that is too long won't be configured...
-		TalkEvent wLong = createWorkshopEvent("300 Minutes Workshop", 300);
+		// Check that a Talk that is too long won't be configured...
+		TalkEvent wLong = createTalkEvent("300 Minutes Talk", 300);
 		Assert.assertEquals(false, session.addEvent(wLong));
 		// ... and that it didn't have messed around with the other parameters
 		Assert.assertEquals(1, session.getEvents().size());
 		Assert.assertEquals(DateUtils.createDate(13, 15), session.getNextEventTime());
 		Assert.assertEquals(225, session.getMinutesLeft());
 
-		// ... but we can still add other normal sized Workshops
-		TalkEvent w30 = createWorkshopEvent("30 Minutes Workshop", 30);
+		// ... but we can still add other normal sized Talks
+		TalkEvent w30 = createTalkEvent("30 Minutes Talk", 30);
 		Assert.assertEquals(true, session.addEvent(w30));
 		Assert.assertEquals(2, session.getEvents().size());
 		Assert.assertEquals(DateUtils.createDate(13, 45), session.getNextEventTime());
@@ -140,15 +140,15 @@ public class SessionTest {
 	 * Quick method for mocking a {@link TalkEvent}
 	 * 
 	 * @param name
-	 *            The workshop's name
+	 *            The talk's name
 	 * @param duration
-	 *            The workshop's duration
+	 *            The talk's duration
 	 * @return new instance of a {@link TalkEvent}
 	 */
-	private TalkEvent createWorkshopEvent(String name, int duration) {
-		Talk workshop = new Talk(name, duration);
-		TalkEvent workshopEvent = new TalkEvent(workshop);
-		return workshopEvent;
+	private TalkEvent createTalkEvent(String name, int duration) {
+		Talk talk = new Talk(name, duration);
+		TalkEvent talkEvent = new TalkEvent(talk);
+		return talkEvent;
 	}
 
 }

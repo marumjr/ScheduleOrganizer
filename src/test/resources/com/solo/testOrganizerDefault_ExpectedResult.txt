@@ -1,20 +1,20 @@
 Track 1:
-09:00AM 2 Hours Workshop 120min
-11:00AM 60 Minutes Workshop 60min
+09:00AM 2 Hours Talk 120min
+11:00AM 60 Minutes Talk 60min
 12:00PM Lunch
-01:00PM 100 Minutes Workshop 100min
-02:40PM 90 Minutes Workshop 90min
-04:10PM 45 Minutes Workshop 45min
-04:55PM Lightning Workshop lightning
+01:00PM 100 Minutes Talk 100min
+02:40PM 90 Minutes Talk 90min
+04:10PM 45 Minutes Talk 45min
+04:55PM Lightning Talk lightning
 05:00PM Meet Your Colleagues Event
 
 Track 2:
-09:00AM 75 Minutes Workshop 75min
-10:15AM 65 Minutes Workshop 65min
-11:20AM 35 Minutes Workshop 35min
+09:00AM 75 Minutes Talk 75min
+10:15AM 65 Minutes Talk 65min
+11:20AM 35 Minutes Talk 35min
 12:00PM Lunch
-01:00PM 30 Minutes Workshop 30min
-01:30PM 15 Minutes Workshop 15min
-01:45PM 10 Minutes Workshop 10min
+01:00PM 30 Minutes Talk 30min
+01:30PM 15 Minutes Talk 15min
+01:45PM 10 Minutes Talk 10min
 04:00PM Meet Your Colleagues Event
 

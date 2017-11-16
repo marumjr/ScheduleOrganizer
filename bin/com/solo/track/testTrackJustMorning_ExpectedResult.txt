@@ -1,6 +1,6 @@
-09:00AM 15 Minutes Workshop 15min
-09:15AM 30 Minutes Workshop 30min
-09:45AM 45 Minutes Workshop 45min
-10:30AM Lightning Workshop lightning
+09:00AM 15 Minutes Talk 15min
+09:15AM 30 Minutes Talk 30min
+09:45AM 45 Minutes Talk 45min
+10:30AM Lightning Talk lightning
 12:00PM Lunch
 04:00PM Meet Your Colleagues Event

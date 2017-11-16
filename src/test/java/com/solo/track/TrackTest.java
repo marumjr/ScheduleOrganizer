@@ -22,7 +22,7 @@ public class TrackTest extends LargeOutputTest {
 	/**
 	 * Integration test for the methods within the {@link Track} class.
 	 * <p>
-	 * The default case contemplates when there are enough workshops during the
+	 * The default case contemplates when there are enough talks during the
 	 * morning and the afternoon to cover it whole.
 	 * <p>
 	 * Constructs the {@link Track} and check if the output (when print) is the
@@ -33,16 +33,16 @@ public class TrackTest extends LargeOutputTest {
 	 */
 	@Test
 	public void testTrackDefault() throws IOException, URISyntaxException {
-		// 95 minutes of workshops in the morning
-		MorningSession morningSession = createMorningSession(createWorkshopEvent("15 Minutes Workshop", 15),
-				createWorkshopEvent("30 Minutes Workshop", 30), createWorkshopEvent("45 Minutes Workshop", 45),
-				createWorkshopEvent("Lightning Workshop", 5));
+		// 95 minutes of talks in the morning
+		MorningSession morningSession = createMorningSession(createTalkEvent("15 Minutes Talk", 15),
+				createTalkEvent("30 Minutes Talk", 30), createTalkEvent("45 Minutes Talk", 45),
+				createTalkEvent("Lightning Talk", 5));
 
 		// 220 minutes in the afternoon (from a total of 240 possible)
-		AfternoonSession afternoonSession = createAfternoonSession(createWorkshopEvent("45 Minutes Workshop", 45),
-				createWorkshopEvent("30 Minutes Workshop", 30), createWorkshopEvent("60 Minutes Workshop", 60),
-				createWorkshopEvent("Lightning Workshop", 5), createWorkshopEvent("10 Minutes Workshop", 10),
-				createWorkshopEvent("70 Minutes Workshop", 70));
+		AfternoonSession afternoonSession = createAfternoonSession(createTalkEvent("45 Minutes Talk", 45),
+				createTalkEvent("30 Minutes Talk", 30), createTalkEvent("60 Minutes Talk", 60),
+				createTalkEvent("Lightning Talk", 5), createTalkEvent("10 Minutes Talk", 10),
+				createTalkEvent("70 Minutes Talk", 70));
 
 		Track track = new Track(morningSession, afternoonSession);
 		track.printTrack();
@@ -53,7 +53,7 @@ public class TrackTest extends LargeOutputTest {
 	/**
 	 * Integration test for the methods within the {@link Track} class.
 	 * <p>
-	 * This case contemplates when there are enough workshops for just the
+	 * This case contemplates when there are enough talks for just the
 	 * morning session
 	 * <p>
 	 * Constructs the {@link Track} and check if the output (when print) is the
@@ -65,9 +65,9 @@ public class TrackTest extends LargeOutputTest {
 	@Test
 	public void testTrackJustMorning() throws IOException, URISyntaxException {
 		// Session just in the morning
-		MorningSession morningSession = createMorningSession(createWorkshopEvent("15 Minutes Workshop", 15),
-				createWorkshopEvent("30 Minutes Workshop", 30), createWorkshopEvent("45 Minutes Workshop", 45),
-				createWorkshopEvent("Lightning Workshop", 5));
+		MorningSession morningSession = createMorningSession(createTalkEvent("15 Minutes Talk", 15),
+				createTalkEvent("30 Minutes Talk", 30), createTalkEvent("45 Minutes Talk", 45),
+				createTalkEvent("Lightning Talk", 5));
 
 		Track track = new Track(morningSession, null);
 		track.printTrack();
@@ -78,7 +78,7 @@ public class TrackTest extends LargeOutputTest {
 	/**
 	 * Integration test for the methods within the {@link Track} class.
 	 * <p>
-	 * This case contemplates when there are enough workshops for the whole
+	 * This case contemplates when there are enough talks for the whole
 	 * morning, but not enough to last the whole afternoon (until when the Meet
 	 * Your Colleagues event takes in).
 	 * <p>
@@ -90,14 +90,14 @@ public class TrackTest extends LargeOutputTest {
 	 */
 	@Test
 	public void testTrackShortAfternoon() throws IOException, URISyntaxException {
-		MorningSession morningSession = createMorningSession(createWorkshopEvent("15 Minutes Workshop", 15),
-				createWorkshopEvent("30 Minutes Workshop", 30), createWorkshopEvent("45 Minutes Workshop", 45),
-				createWorkshopEvent("Lightning Workshop", 5));
+		MorningSession morningSession = createMorningSession(createTalkEvent("15 Minutes Talk", 15),
+				createTalkEvent("30 Minutes Talk", 30), createTalkEvent("45 Minutes Talk", 45),
+				createTalkEvent("Lightning Talk", 5));
 
 		// 150 minutes total, there's still 30 minutes until Meet Your Colleagues
-		AfternoonSession afternoonSession = createAfternoonSession(createWorkshopEvent("45 Minutes Workshop", 45),
-				createWorkshopEvent("30 Minutes Workshop", 30), createWorkshopEvent("60 Minutes Workshop", 60),
-				createWorkshopEvent("Lightning Workshop", 5), createWorkshopEvent("10 Minutes Workshop", 10));
+		AfternoonSession afternoonSession = createAfternoonSession(createTalkEvent("45 Minutes Talk", 45),
+				createTalkEvent("30 Minutes Talk", 30), createTalkEvent("60 Minutes Talk", 60),
+				createTalkEvent("Lightning Talk", 5), createTalkEvent("10 Minutes Talk", 10));
 
 		Track track = new Track(morningSession, afternoonSession);
 		track.printTrack();
@@ -141,15 +141,15 @@ public class TrackTest extends LargeOutputTest {
 	 * Quick method for mocking a {@link TalkEvent}
 	 * 
 	 * @param name
-	 *            The workshops's name
+	 *            The talks's name
 	 * @param duration
-	 *            The workshop's duration
+	 *            The talk's duration
 	 * @return new instance of a {@link TalkEvent}
 	 */
-	private TalkEvent createWorkshopEvent(String name, int duration) {
-		Talk workshop = new Talk(name, duration);
-		TalkEvent workshopEvent = new TalkEvent(workshop);
-		return workshopEvent;
+	private TalkEvent createTalkEvent(String name, int duration) {
+		Talk talk = new Talk(name, duration);
+		TalkEvent talkEvent = new TalkEvent(talk);
+		return talkEvent;
 	}
 
 }

@@ -17,6 +17,7 @@ public class DateUtilsTest {
 	/**
 	 * Checks if {@link DateUtils#createDate(int, int)} creates a date properly
 	 */
+	@Test
 	public void testCreateDate() {
 		Calendar cal = new GregorianCalendar();
 		cal.set(Calendar.HOUR_OF_DAY, 12);

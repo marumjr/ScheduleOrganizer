@@ -113,7 +113,7 @@ Track 10:
 09:00AM Cool stuff you didn’t knew you could do with the Terminal 40min
 09:40AM Good practices vol2 40min
 10:20AM Share your knowledge vol1 40min
-11:00AM Writing your own Workshop: a Meta-Workshop 40min
+11:00AM Writing your own Talk: a Meta-Talk 40min
 11:40AM “Git”ing like a boss vol4 20min
 12:00PM Lunch
 01:00PM Good eating habits: preventing health problems 40min
