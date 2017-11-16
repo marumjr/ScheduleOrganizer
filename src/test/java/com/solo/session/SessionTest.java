@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.solo.event.WorkshopEvent;
+import com.solo.event.TalkEvent;
+import com.solo.talk.Talk;
 import com.solo.utils.DateUtils;
-import com.solo.workshop.Workshop;
 
 /**
  * Class containing the tests for {@link Session}
@@ -31,7 +31,7 @@ public class SessionTest {
 		Assert.assertEquals(DateUtils.createDate(9, 0), session.getInitialTime());
 
 		// In this moment, there are no Events in this session...
-		Assert.assertEquals(new ArrayList<WorkshopEvent>(), session.getEvents());
+		Assert.assertEquals(new ArrayList<TalkEvent>(), session.getEvents());
 		// ... because of that, the available time for an event is the same as
 		// the initial time
 		Assert.assertEquals(DateUtils.createDate(9, 0), session.getNextEventTime());
@@ -44,14 +44,14 @@ public class SessionTest {
 		Assert.assertEquals((180 - 15), session.calculateDurationUsage(15));
 
 		// Configuring a workshop
-		WorkshopEvent w15 = createWorkshopEvent("15 Minutes Workshop", 15);
+		TalkEvent w15 = createWorkshopEvent("15 Minutes Workshop", 15);
 		Assert.assertEquals(true, session.addEvent(w15));
 		Assert.assertEquals(1, session.getEvents().size());
 		Assert.assertEquals(DateUtils.createDate(9, 15), session.getNextEventTime());
 		Assert.assertEquals(165, session.getMinutesLeft());
 
 		// Check that a Workshop that is too long won't be configured...
-		WorkshopEvent wLong = createWorkshopEvent("300 Minutes Workshop", 300);
+		TalkEvent wLong = createWorkshopEvent("300 Minutes Workshop", 300);
 		Assert.assertEquals(false, session.addEvent(wLong));
 		// ... and that it didn't have messed around with the other parameters
 		Assert.assertEquals(1, session.getEvents().size());
@@ -59,7 +59,7 @@ public class SessionTest {
 		Assert.assertEquals(165, session.getMinutesLeft());
 
 		// ... but we can still add other normal sized Workshops
-		WorkshopEvent w30 = createWorkshopEvent("30 Minutes Workshop", 30);
+		TalkEvent w30 = createWorkshopEvent("30 Minutes Workshop", 30);
 		Assert.assertEquals(true, session.addEvent(w30));
 		Assert.assertEquals(2, session.getEvents().size());
 		Assert.assertEquals(DateUtils.createDate(9, 45), session.getNextEventTime());
@@ -82,7 +82,7 @@ public class SessionTest {
 		Assert.assertEquals(DateUtils.createDate(13, 0), session.getInitialTime());
 
 		// In this moment, there are no Events in this session...
-		Assert.assertEquals(new ArrayList<WorkshopEvent>(), session.getEvents());
+		Assert.assertEquals(new ArrayList<TalkEvent>(), session.getEvents());
 		// ... because of that, the available time for an event is the same as
 		// the initial time
 		Assert.assertEquals(DateUtils.createDate(13, 0), session.getNextEventTime());
@@ -95,14 +95,14 @@ public class SessionTest {
 		Assert.assertEquals((240 - 15), session.calculateDurationUsage(15));
 
 		// Configuring a workshop
-		WorkshopEvent w15 = createWorkshopEvent("15 Minutes Workshop", 15);
+		TalkEvent w15 = createWorkshopEvent("15 Minutes Workshop", 15);
 		Assert.assertEquals(true, session.addEvent(w15));
 		Assert.assertEquals(1, session.getEvents().size());
 		Assert.assertEquals(DateUtils.createDate(13, 15), session.getNextEventTime());
 		Assert.assertEquals(225, session.getMinutesLeft());
 
 		// Check that a Workshop that is too long won't be configured...
-		WorkshopEvent wLong = createWorkshopEvent("300 Minutes Workshop", 300);
+		TalkEvent wLong = createWorkshopEvent("300 Minutes Workshop", 300);
 		Assert.assertEquals(false, session.addEvent(wLong));
 		// ... and that it didn't have messed around with the other parameters
 		Assert.assertEquals(1, session.getEvents().size());
@@ -110,7 +110,7 @@ public class SessionTest {
 		Assert.assertEquals(225, session.getMinutesLeft());
 
 		// ... but we can still add other normal sized Workshops
-		WorkshopEvent w30 = createWorkshopEvent("30 Minutes Workshop", 30);
+		TalkEvent w30 = createWorkshopEvent("30 Minutes Workshop", 30);
 		Assert.assertEquals(true, session.addEvent(w30));
 		Assert.assertEquals(2, session.getEvents().size());
 		Assert.assertEquals(DateUtils.createDate(13, 45), session.getNextEventTime());
@@ -137,17 +137,17 @@ public class SessionTest {
 	}
 
 	/**
-	 * Quick method for mocking a {@link WorkshopEvent}
+	 * Quick method for mocking a {@link TalkEvent}
 	 * 
 	 * @param name
 	 *            The workshop's name
 	 * @param duration
 	 *            The workshop's duration
-	 * @return new instance of a {@link WorkshopEvent}
+	 * @return new instance of a {@link TalkEvent}
 	 */
-	private WorkshopEvent createWorkshopEvent(String name, int duration) {
-		Workshop workshop = new Workshop(name, duration);
-		WorkshopEvent workshopEvent = new WorkshopEvent(workshop);
+	private TalkEvent createWorkshopEvent(String name, int duration) {
+		Talk workshop = new Talk(name, duration);
+		TalkEvent workshopEvent = new TalkEvent(workshop);
 		return workshopEvent;
 	}
 

@@ -1,4 +1,4 @@
-package com.solo.workshop;
+package com.solo.talk;
 
 import com.solo.utils.GlobalConstraints;
 
@@ -7,7 +7,7 @@ import com.solo.utils.GlobalConstraints;
  * 
  * @author marumjr
  */
-public class Workshop {
+public class Talk {
 
 	private String name;
 
@@ -21,7 +21,7 @@ public class Workshop {
 	 * @param duration
 	 *            The workshop's duration (in minutes)
 	 */
-	public Workshop(String name, int duration) {
+	public Talk(String name, int duration) {
 		this.name = name;
 		this.duration = duration;
 	}
@@ -38,7 +38,7 @@ public class Workshop {
 	 * @param duration
 	 *            A string containing the workshop's duration
 	 */
-	public Workshop(String name, String duration) {
+	public Talk(String name, String duration) {
 		this.name = name;
 
 		if (GlobalConstraints.LIGHTNING_STRING.equalsIgnoreCase(duration.trim())) {

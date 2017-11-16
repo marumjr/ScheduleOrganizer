@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.solo.event.WorkshopEvent;
+import com.solo.event.TalkEvent;
 import com.solo.session.AfternoonSession;
 import com.solo.session.MorningSession;
 import com.solo.session.Session;
 import com.solo.session.SessionFactory;
+import com.solo.talk.Talk;
+import com.solo.talk.TalkDurationReverseComparator;
 import com.solo.track.Track;
-import com.solo.workshop.Workshop;
-import com.solo.workshop.WorkshopDurationReverseComparator;
 
 /**
- * Object responsible for organizing a list of {@link Workshop}s in a proper
+ * Object responsible for organizing a list of {@link Talk}s in a proper
  * schedule.
  * 
  * @author marumjr
@@ -26,14 +26,14 @@ public class Organizer {
 	/**
 	 * Default constructor for {@link Organizer}.
 	 * <p>
-	 * One must provide it with the a list of {@link Workshop}s for it to
+	 * One must provide it with the a list of {@link Talk}s for it to
 	 * organize.
 	 * 
 	 * @param workshops
-	 *            A list of {@link Workshop}s to organize
+	 *            A list of {@link Talk}s to organize
 	 */
-	public Organizer(List<Workshop> workshops) {
-		Collections.sort(workshops, new WorkshopDurationReverseComparator());
+	public Organizer(List<Talk> workshops) {
+		Collections.sort(workshops, new TalkDurationReverseComparator());
 		this.organize(workshops);
 	}
 
@@ -65,12 +65,12 @@ public class Organizer {
 	 * @param workshops
 	 *            List of workshops to organize in tracks
 	 */
-	private void organize(List<Workshop> workshops) {
+	private void organize(List<Talk> workshops) {
 		// Initialize our SessionFactory
 		SessionFactory sessionFactory = new SessionFactory();
 
 		List<Session> sessions = new ArrayList<Session>();
-		for (Workshop workshop : workshops) {
+		for (Talk workshop : workshops) {
 			int duration = workshop.getDuration();
 			int bestFitIndex = -1;
 			int minDurationLeft = Integer.MAX_VALUE;
@@ -97,7 +97,7 @@ public class Organizer {
 				session = sessions.get(bestFitIndex);
 			}
 			// Add event to the session
-			WorkshopEvent event = new WorkshopEvent(workshop);
+			TalkEvent event = new TalkEvent(workshop);
 			session.addEvent(event);
 		}
 

@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.solo.workshop.Workshop;
+import com.solo.talk.Talk;
 
 /**
  * The main class (containing the main() method).
@@ -43,7 +43,7 @@ public class ScheduleOrganizer {
 			// Assuming the first argument will be a file, and ignoring anything
 			// else
 			String filename = args[0];
-			List<Workshop> workshops = parseInputFile(filename);
+			List<Talk> workshops = parseInputFile(filename);
 
 			Organizer organizer = new Organizer(workshops);
 			organizer.printTracks();
@@ -65,17 +65,17 @@ public class ScheduleOrganizer {
 	 * 
 	 * @param filename
 	 *            The name of the file
-	 * @return a list of all the {@link Workshop}s
+	 * @return a list of all the {@link Talk}s
 	 * @throws IOException
 	 */
-	protected static List<Workshop> parseInputFile(String filename) throws IOException {
-		List<Workshop> workshops = new ArrayList<Workshop>();
+	protected static List<Talk> parseInputFile(String filename) throws IOException {
+		List<Talk> workshops = new ArrayList<Talk>();
 
 		// Reading the parameters from the file
 		String line = null;
 		BufferedReader br = new BufferedReader(new FileReader(filename));
 		while ((line = br.readLine()) != null) {
-			Workshop workshop = parseWorkshopInfo(line);
+			Talk workshop = parseWorkshopInfo(line);
 			workshops.add(workshop);
 		}
 		br.close();
@@ -85,13 +85,13 @@ public class ScheduleOrganizer {
 
 	/**
 	 * Parse a text line in search of peaces of workshop information, then
-	 * construct said {@link Workshop} with the peaces of information found
+	 * construct said {@link Talk} with the peaces of information found
 	 * 
 	 * @param line
 	 *            Line of text to be parsed for the workshop information
-	 * @return an instance of {@link Workshop}
+	 * @return an instance of {@link Talk}
 	 */
-	protected static Workshop parseWorkshopInfo(String line) {
+	protected static Talk parseWorkshopInfo(String line) {
 		String trimmedLine = line.trim();
 		int lastSpace = trimmedLine.lastIndexOf(" ");
 
@@ -101,7 +101,7 @@ public class ScheduleOrganizer {
 		// event
 		String duration = trimmedLine.substring(lastSpace + 1, trimmedLine.length());
 
-		Workshop workshop = new Workshop(name, duration);
+		Talk workshop = new Talk(name, duration);
 		return workshop;
 	}
 

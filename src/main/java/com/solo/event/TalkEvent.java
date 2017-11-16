@@ -1,25 +1,25 @@
 package com.solo.event;
 
+import com.solo.talk.Talk;
 import com.solo.utils.GlobalConstraints;
-import com.solo.workshop.Workshop;
 
 /**
  * Subclass of {@link Event}, representing a scheduled workshop.
  * 
  * @author marumjr
  */
-public class WorkshopEvent extends Event {
+public class TalkEvent extends Event {
 
 	/**
 	 * Default constructor.
 	 * <p>
-	 * It builds this object according to the content of a {@link Workshop}.
+	 * It builds this object according to the content of a {@link Talk}.
 	 * 
 	 * @param workshop
-	 *            A {@link Workshop} containing informations to build this
+	 *            A {@link Talk} containing informations to build this
 	 *            object
 	 */
-	public WorkshopEvent(Workshop workshop) {
+	public TalkEvent(Talk workshop) {
 		this.name = workshop.getName();
 		this.duration = workshop.getDuration();
 	}

@@ -7,10 +7,10 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.solo.LargeOutputTest;
-import com.solo.event.WorkshopEvent;
+import com.solo.event.TalkEvent;
 import com.solo.session.AfternoonSession;
 import com.solo.session.MorningSession;
-import com.solo.workshop.Workshop;
+import com.solo.talk.Talk;
 
 /**
  * Class containing the tests for {@link Track}
@@ -109,12 +109,12 @@ public class TrackTest extends LargeOutputTest {
 	 * Quick method for mocking an {@link MorningSession}
 	 * 
 	 * @param events
-	 *            {@link WorkshopEvent} to include in your session
+	 *            {@link TalkEvent} to include in your session
 	 * @return new instance of an {@link MorningSession}
 	 */
-	private MorningSession createMorningSession(WorkshopEvent... events) {
+	private MorningSession createMorningSession(TalkEvent... events) {
 		MorningSession session = new MorningSession();
-		for (WorkshopEvent event : events) {
+		for (TalkEvent event : events) {
 			session.addEvent(event);
 		}
 
@@ -125,12 +125,12 @@ public class TrackTest extends LargeOutputTest {
 	 * Quick method for mocking an {@link AfternoonSession}
 	 * 
 	 * @param events
-	 *            {@link WorkshopEvent} to include in your session
+	 *            {@link TalkEvent} to include in your session
 	 * @return new instance of an {@link AfternoonSession}
 	 */
-	private AfternoonSession createAfternoonSession(WorkshopEvent... events) {
+	private AfternoonSession createAfternoonSession(TalkEvent... events) {
 		AfternoonSession session = new AfternoonSession();
-		for (WorkshopEvent event : events) {
+		for (TalkEvent event : events) {
 			session.addEvent(event);
 		}
 
@@ -138,17 +138,17 @@ public class TrackTest extends LargeOutputTest {
 	}
 
 	/**
-	 * Quick method for mocking a {@link WorkshopEvent}
+	 * Quick method for mocking a {@link TalkEvent}
 	 * 
 	 * @param name
 	 *            The workshops's name
 	 * @param duration
 	 *            The workshop's duration
-	 * @return new instance of a {@link WorkshopEvent}
+	 * @return new instance of a {@link TalkEvent}
 	 */
-	private WorkshopEvent createWorkshopEvent(String name, int duration) {
-		Workshop workshop = new Workshop(name, duration);
-		WorkshopEvent workshopEvent = new WorkshopEvent(workshop);
+	private TalkEvent createWorkshopEvent(String name, int duration) {
+		Talk workshop = new Talk(name, duration);
+		TalkEvent workshopEvent = new TalkEvent(workshop);
 		return workshopEvent;
 	}
 

@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.solo.event.WorkshopEvent;
+import com.solo.event.TalkEvent;
 import com.solo.utils.DateUtils;
 
 /**
  * Abstract class representing a session of a working day, which can contain
- * {@link WorkshopEvent}s.
+ * {@link TalkEvent}s.
  * 
  * @author marumjr
  */
 public abstract class Session {
 
-	private List<WorkshopEvent> events = new ArrayList<WorkshopEvent>();
+	private List<TalkEvent> events = new ArrayList<TalkEvent>();
 
 	private Date nextEventTime = this.getInitialTime();
 
@@ -53,7 +53,7 @@ public abstract class Session {
 	 * @return <code>true</code> if the Event could be added, <code>false</code>
 	 *         otherwise
 	 */
-	public boolean addEvent(WorkshopEvent event) {
+	public boolean addEvent(TalkEvent event) {
 		boolean inserted = false;
 
 		int eventDuration = event.getDuration();
@@ -88,7 +88,7 @@ public abstract class Session {
 		return this.nextEventTime;
 	}
 
-	public List<WorkshopEvent> getEvents() {
+	public List<TalkEvent> getEvents() {
 		return this.events;
 	}
 

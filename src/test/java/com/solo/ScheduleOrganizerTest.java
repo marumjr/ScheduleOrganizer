@@ -10,7 +10,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.solo.workshop.Workshop;
+import com.solo.talk.Talk;
 
 /**
  * Class containing the tests for {@link ScheduleOrganizer}
@@ -28,7 +28,7 @@ public class ScheduleOrganizerTest extends LargeOutputTest {
 	@Test
 	public void testParseWorkshopInfo() {
 		// Common cases
-		Workshop workshop = ScheduleOrganizer.parseWorkshopInfo("65 Minutes Workshop 65min");
+		Talk workshop = ScheduleOrganizer.parseWorkshopInfo("65 Minutes Workshop 65min");
 		Assert.assertEquals("65 Minutes Workshop", workshop.getName());
 		Assert.assertEquals(65, workshop.getDuration());
 
@@ -71,8 +71,8 @@ public class ScheduleOrganizerTest extends LargeOutputTest {
 	public void testParseInputFile() throws FileNotFoundException, IOException, URISyntaxException {
 		File inputFile = retrieveResourceFile("defaultInput.txt");
 
-		List<Workshop> workshops = ScheduleOrganizer.parseInputFile(inputFile.getAbsolutePath());
-		Iterator<Workshop> iterator = workshops.iterator();
+		List<Talk> workshops = ScheduleOrganizer.parseInputFile(inputFile.getAbsolutePath());
+		Iterator<Talk> iterator = workshops.iterator();
 
 		// Check every possible parsed line
 		assertSameName(iterator, "Create better mocks for Spring Boot", 65);
@@ -183,8 +183,8 @@ public class ScheduleOrganizerTest extends LargeOutputTest {
 	 * @param expectedDuration
 	 *            Expected duration which to compare
 	 */
-	private void assertSameName(Iterator<Workshop> iterator, String expectedName, int expectedDuration) {
-		Workshop nextWorkshop = iterator.next();
+	private void assertSameName(Iterator<Talk> iterator, String expectedName, int expectedDuration) {
+		Talk nextWorkshop = iterator.next();
 		Assert.assertEquals(expectedName, nextWorkshop.getName());
 		Assert.assertEquals(expectedDuration, nextWorkshop.getDuration());
 	}

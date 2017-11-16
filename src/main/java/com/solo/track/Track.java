@@ -7,7 +7,7 @@ import java.util.List;
 import com.solo.event.Event;
 import com.solo.event.LunchEvent;
 import com.solo.event.MeetYourColleaguesEvent;
-import com.solo.event.WorkshopEvent;
+import com.solo.event.TalkEvent;
 import com.solo.exception.ScheduleOrganizerRuntimeException;
 import com.solo.session.AfternoonSession;
 import com.solo.session.MorningSession;
@@ -58,10 +58,10 @@ public class Track {
 	 * 
 	 * @param morningSession
 	 *            The {@link MorningSession}, containing all the
-	 *            {@link WorkshopEvent} that are going to happen in the morning
+	 *            {@link TalkEvent} that are going to happen in the morning
 	 * @param afternoonSession
 	 *            The {@link AfternoonSession}, containing all the
-	 *            {@link WorkshopEvent} that are going to happen in the
+	 *            {@link TalkEvent} that are going to happen in the
 	 *            afternoon
 	 */
 	private void buildEvents(MorningSession morningSession, AfternoonSession afternoonSession) {

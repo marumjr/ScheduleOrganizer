@@ -6,8 +6,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.solo.exception.ScheduleOrganizerRuntimeException;
+import com.solo.talk.Talk;
 import com.solo.utils.DateUtils;
-import com.solo.workshop.Workshop;
 
 /**
  * Class containing the tests for {@link Event}
@@ -98,16 +98,16 @@ public class EventTest {
 	}
 
 	/**
-	 * Tests the constructor and all methods of {@link WorkshopEvent}.
+	 * Tests the constructor and all methods of {@link TalkEvent}.
 	 * <p>
 	 * The normal case here states that it's not a lightning event
 	 */
 	@Test
 	public void testWorkshopEventNormal() {
 		// The 'normal' Workshop event doesn't have lightning duration
-		Workshop workshop = new Workshop("15 Minutes Workshop", 15);
+		Talk workshop = new Talk("15 Minutes Workshop", 15);
 
-		WorkshopEvent event = new WorkshopEvent(workshop);
+		TalkEvent event = new TalkEvent(workshop);
 		Assert.assertEquals(15, event.getDuration());
 		Assert.assertEquals("15 Minutes Workshop", event.getName());
 
@@ -128,16 +128,16 @@ public class EventTest {
 	}
 
 	/**
-	 * Tests the constructor and all methods of {@link WorkshopEvent}.
+	 * Tests the constructor and all methods of {@link TalkEvent}.
 	 * <p>
 	 * In this case, it's testing a lightning event
 	 */
 	@Test
 	public void testWorkshopEventLightning() {
 		// The 'lightning' Workshop event has a 5 minutes duration
-		Workshop workshop = new Workshop("Lightning Workshop", 5);
+		Talk workshop = new Talk("Lightning Workshop", 5);
 
-		WorkshopEvent event = new WorkshopEvent(workshop);
+		TalkEvent event = new TalkEvent(workshop);
 		event.setScheduledTime(DateUtils.createDate(13, 30));
 
 		Assert.assertEquals(5, event.getDuration());

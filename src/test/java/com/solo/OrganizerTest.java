@@ -8,7 +8,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.solo.workshop.Workshop;
+import com.solo.talk.Talk;
 
 /**
  * Class containing the tests for {@link Organizer}
@@ -28,7 +28,7 @@ public class OrganizerTest extends LargeOutputTest {
 	 */
 	@Test
 	public void testOrganizerDefault() throws IOException, URISyntaxException {
-		List<Workshop> workshops = new ArrayList<Workshop>();
+		List<Talk> workshops = new ArrayList<Talk>();
 		workshops.add(createWorkshop("30 Minutes Workshop", 30));
 		workshops.add(createWorkshop("45 Minutes Workshop", 45));
 		workshops.add(createWorkshop("Lightning Workshop", 5));
@@ -59,7 +59,7 @@ public class OrganizerTest extends LargeOutputTest {
 	 */
 	@Test
 	public void testOrganizerJustMorning() throws IOException, URISyntaxException {
-		List<Workshop> workshops = new ArrayList<Workshop>();
+		List<Talk> workshops = new ArrayList<Talk>();
 		workshops.add(createWorkshop("30 Minutes Workshop", 30));
 		workshops.add(createWorkshop("45 Minutes Workshop", 45));
 		workshops.add(createWorkshop("Lightning Workshop", 5));
@@ -81,8 +81,8 @@ public class OrganizerTest extends LargeOutputTest {
 	 *            Workshop's duration
 	 * @return new instance of Workshop
 	 */
-	private Workshop createWorkshop(String name, int duration) {
-		Workshop workshop = new Workshop(name, duration);
+	private Talk createWorkshop(String name, int duration) {
+		Talk workshop = new Talk(name, duration);
 		return workshop;
 	}
 
