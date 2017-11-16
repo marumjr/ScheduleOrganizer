@@ -1,0 +1,2 @@
+#!/bin/sh
+java -jar ScheduleOrganizer.jar ./com/solo/largeInput.txt
