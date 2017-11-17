@@ -1,2 +1,3 @@
 #!/bin/sh
+echo “java -cp .:ScheduleOrganizer_lib/junit.jar:ScheduleOrganizer_lib/org.hamcrest.core.jar org.junit.runner.JUnitCore com.solo.OrganizerTest com.solo.ScheduleOrganizerTest com.solo.event.EventTest com.solo.session.SessionTest com.solo.talk.TalkTest com.solo.track.TrackTest com.solo.utils.DateUtilsTest”
 java -cp .:ScheduleOrganizer_lib/junit.jar:ScheduleOrganizer_lib/org.hamcrest.core.jar org.junit.runner.JUnitCore com.solo.OrganizerTest com.solo.ScheduleOrganizerTest com.solo.event.EventTest com.solo.session.SessionTest com.solo.talk.TalkTest com.solo.track.TrackTest com.solo.utils.DateUtilsTest
